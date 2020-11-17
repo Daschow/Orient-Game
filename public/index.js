@@ -10,12 +10,14 @@ const contactChoice2 = document.getElementById('contactChoice2');
 const dropfilediv = document.getElementById('dropfilediv');
 const successMessage = document.getElementById('successMessage');
 const composantSelector = document.getElementById('composantSelector');
+const bxtlicence = document.getElementById('bxtlicence');
 
 load()
 function load(){
     radiobtndiv.style.display = "none"
     composantSelector.style.display = "none"
     dropfilediv.style.display = "none"
+    bxtlicence.style.display = "none"
 }
 
 
@@ -31,6 +33,13 @@ selectOne.addEventListener('change', function (even){
         dropfilediv.style.display = "none"
         composantSelector.style.display = "none"
         radiobtndiv.style.display = "block"
+        console.log(selectTwo)
+        if(contactChoice2.value == 0){
+            bxtlicence.style.display = "block"
+        }else{
+            bxtlicence.style.display = "none"
+        }
+        
     }else if(selectOneValue == 3){
         //default
         load();
@@ -58,8 +67,10 @@ selectTwo.addEventListener('change', function (even){
 });
 contactChoice2.addEventListener('change',function (even){
     dropfilediv.style.display = "block"
+    bxtlicence.style.display = "none"
 });
 contactChoice1.addEventListener('change',function (even){
     dropfilediv.style.display = "none"
-});
+    bxtlicence.style.display = "block"
     
+});

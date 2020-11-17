@@ -33,12 +33,6 @@ selectOne.addEventListener('change', function (even){
         dropfilediv.style.display = "none"
         composantSelector.style.display = "none"
         radiobtndiv.style.display = "block"
-        console.log(selectTwo)
-        if(contactChoice2.value == 0){
-            bxtlicence.style.display = "block"
-        }else{
-            bxtlicence.style.display = "none"
-        }
         
     }else if(selectOneValue == 3){
         //default

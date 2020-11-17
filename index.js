@@ -7,13 +7,21 @@ const lbldropfile = document.getElementById('lbldropfile');
 const radiobtndiv = document.getElementById('radiobtndiv');
 const contactChoice1 = document.getElementById('contactChoice1');
 const contactChoice2 = document.getElementById('contactChoice2');
+const dropfilediv = document.getElementById('dropfilediv');
+const successMessage = document.getElementById('successMessage');
 
-lblTwo.style.display = "none"
-selectTwo.style.display = "none"
-DisplayFileOff()
+
+load()
+function load(){
+    radiobtndiv.style.display = "none"
+    lblTwo.style.display = "none"
+    selectTwo.style.display = "none"
+    dropfilediv.style.display = "none"
+}
+
 
 buttonElement.addEventListener('click', function (event) {
-    alert('Element clicked through function!');
+    successMessage.style.display = "block"
     console.log("debug")
   });
   
@@ -24,34 +32,29 @@ selectOne.addEventListener('change', function (even){
         lblTwo.style.display = "none"
         selectTwo.style.display = "none"
         radiobtndiv.style.display = "block"
-    }else{
+    }else if(selectOneValue == 3){
+        load();
+    }
+    else{
         //si de va
         lblTwo.style.display = "block"
         selectTwo.style.display = "block"
-        DisplayFileOff()
+        dropfilediv.style.display = "none"
         radiobtndiv.style.display = "none"
     }
 });
 selectTwo.addEventListener('change', function (even){
     var selectTwoValue = selectTwo.options[selectTwo.selectedIndex].value;
     if(selectTwoValue == 0){
-        DisplayFileOff()
+        dropfilediv.style.display = "none"
     }else{
-        DisplayFile()
+        dropfilediv.style.display = "block"
     }
 });
 contactChoice2.addEventListener('change',function (even){
-    DisplayFile()
+    dropfilediv.style.display = "block"
 });
 contactChoice1.addEventListener('change',function (even){
-    DisplayFileOff()
+    dropfilediv.style.display = "none"
 });
-
-function DisplayFile() {
-    dropfile.style.display = "block"
-    lbldropfile.style.display = "block"
-}
-function DisplayFileOff() {
-    dropfile.style.display = "none"
-    lbldropfile.style.display = "none"
-}
+    

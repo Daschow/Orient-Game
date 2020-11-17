@@ -27,18 +27,26 @@ buttonElement.addEventListener('click', function (event) {
 selectOne.addEventListener('change', function (even){
     var selectOneValue = selectOne.options[selectOne.selectedIndex].value;
     if(selectOneValue == 0){
-        //si pas de va
+        //Externe
+        dropfilediv.style.display = "none"
         composantSelector.style.display = "none"
         radiobtndiv.style.display = "block"
     }else if(selectOneValue == 3){
+        //default
         load();
     }
     else{
-        //si de va
+        //Etudiant
+        var selectTwoValue = selectTwo.options[selectTwo.selectedIndex].value;
         composantSelector.style.display = "block"
         dropfilediv.style.display = "none"
         radiobtndiv.style.display = "none"
+        if(selectTwoValue == 1){
+            dropfilediv.style.display = "block"
+        }
     }
+
+
 });
 selectTwo.addEventListener('change', function (even){
     var selectTwoValue = selectTwo.options[selectTwo.selectedIndex].value;

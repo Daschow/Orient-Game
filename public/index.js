@@ -9,13 +9,12 @@ const contactChoice1 = document.getElementById('contactChoice1');
 const contactChoice2 = document.getElementById('contactChoice2');
 const dropfilediv = document.getElementById('dropfilediv');
 const successMessage = document.getElementById('successMessage');
-
+const composantSelector = document.getElementById('composantSelector');
 
 load()
 function load(){
     radiobtndiv.style.display = "none"
-    lblTwo.style.display = "none"
-    selectTwo.style.display = "none"
+    composantSelector.style.display = "none"
     dropfilediv.style.display = "none"
 }
 
@@ -29,16 +28,14 @@ selectOne.addEventListener('change', function (even){
     var selectOneValue = selectOne.options[selectOne.selectedIndex].value;
     if(selectOneValue == 0){
         //si pas de va
-        lblTwo.style.display = "none"
-        selectTwo.style.display = "none"
+        composantSelector.style.display = "none"
         radiobtndiv.style.display = "block"
     }else if(selectOneValue == 3){
         load();
     }
     else{
         //si de va
-        lblTwo.style.display = "block"
-        selectTwo.style.display = "block"
+        composantSelector.style.display = "block"
         dropfilediv.style.display = "none"
         radiobtndiv.style.display = "none"
     }

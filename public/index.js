@@ -33,6 +33,9 @@ selectOne.addEventListener('change', function (even){
         dropfilediv.style.display = "none"
         composantSelector.style.display = "none"
         radiobtndiv.style.display = "block"
+        contactChoice1.checked = false
+        contactChoice2.checked = false
+
         
     }else if(selectOneValue == 3){
         //default
@@ -44,6 +47,7 @@ selectOne.addEventListener('change', function (even){
         composantSelector.style.display = "block"
         dropfilediv.style.display = "none"
         radiobtndiv.style.display = "none"
+        bxtlicence.style.display = "none"
         if(selectTwoValue == 1){
             dropfilediv.style.display = "block"
         }

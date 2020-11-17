@@ -1,73 +1,83 @@
 <html>
   <header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/kickstart.js"></script> <!-- KICKSTART -->
+    <link rel="stylesheet" href="css/kickstart.css" media="all" /> <!-- KICKSTART -->    
     <title>Orient Game</title>
   </header>
-  <body>
-    <img src="Logo.png" /> <br>
+  <body class="subpage"  onload="load()">
+    <div class="col_4"></div>
+    <div class="col_4">
+      <fieldset>
+          <!-- Form Fields Here -->
+          <div class="container">
+            <img src="Logo.png" /> <br>
+      
+            <input type="text" placeholder="Nom" class="nameInput" />
+            <input type="text" placeholder="Prénom" class="firstNameInput" />
+            <br />
+            <input type="email" placeholder="Email" class="firstNameInput" />
+            <br>
+            <!-- Date -->
+            <label for="start">Date de naissance</label>
+            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31"/>
 
-      <input type="text" placeholder="Nom" class="nameInput" />
-      <input type="text" placeholder="Prénom" class="firstNameInput" />
-      <br />
-      <input type="email" placeholder="Email" class="firstNameInput" />
-      <br>
-      <label for="start">Date de naissance</label>
-
-      <input
-        type="date"
-        id="start"
-        name="trip-start"
-        value="2018-07-22"
-        min="2018-01-01"
-        max="2018-12-31"
-      />
-
-      <p>Sélectionner votre statut</p>
-      <select name="statue" class="" id="selectOne">
-        <option value="0">Personne extérieure</option>
-        <option value="0">Membre du personnel</option>
-        <option value="1">Etudiant(e) extérieur</option>
-        <option value="1">Etudiant(e)</option>
-      </select>
-
-      <p id="lblTwo">Composante</p>
-      <select name="statue" class="" id="selectTwo">
-        <option value="0">STAPS</option>
-        <option value="1">Autres</option>
-      </select>
-    
-      <div id="radiobtndiv">
-        <p>Etês-vous inscrit à un club ou une fédération ?</p>
-        <div>
-          <input type="radio" id="contactChoice1" value="1" name="federationradio" checked/>
-          <label for="contactChoice1">Oui</label>
-  
-          <input type="radio" id="contactChoice2"  value="0" name="federationradio"/>
-          <label for="contactChoice2">Non</label>
-        </div>
+            <!-- Status Selector -->
+            <p>Sélectionner votre statut</p>
+            <select name="statue" class="" id="selectOne">
+              <option value="3">--Choisir--</option>
+              <option value="0">Personne extérieure</option>
+              <option value="0">Membre du personnel</option>
+              <option value="1">Etudiant(e) extérieur</option>
+              <option value="1">Etudiant(e)</option>
+            </select>
+      
+            <!-- Composant Selector -->
+            <p id="lblTwo">Composante</p>
+            <select name="statue" class="" id="selectTwo">
+              <option value="0">STAPS</option>
+              <option value="1">Autres</option>
+            </select>
+          
+            <div id="radiobtndiv">
+              <p>Etês-vous inscrit à un club ou une fédération ?</p>
+              <!-- Radio -->
+              <div>
+                <input type="radio" class="inline" id="contactChoice1" value="1" name="federationradio" checked/>
+                <label for="contactChoice1">Oui</label>
+        
+                <input type="radio" class="inline" id="contactChoice2"  value="0" name="federationradio"/>
+                <label for="contactChoice2">Non</label>
+              </div>
+            </div>
+            <!-- File Drop -->
+            <div id="dropfilediv">
+              <br>
+              <label id="lbldropfile" for="dropfile">Veuillez ajouter votre certificat médical.</label><br>
+              <input type="file" id="dropfile" name="avatar" accept="image/png, image/jpeg"/>
+            </div>
+            <!-- Second Radio -->
+            <p>Avez-vous déjà participé à ce type d'évènement ?</p>
+            <div>
+              <input type="radio" id="" name="participationradio"/>
+              <label for="">Oui</label>
+      
+              <input type="radio" id="" name="participationradio"/>
+              <label for="">Non</label>
+            </div>
+            <!-- BTN -->
+            <div>
+              <button id="btn">Envoyer</button>
+            </div>
+            <!-- Message -->
+            <!-- Success -->
+            <div id="successMessage" class="notice success hide"><i class="icon-ok icon-large"></i> Merci pour votre inscription 
+              <a href="#close" class="icon-remove"></a></div>
+          </div>
+        </fieldset>
       </div>
-
-      <p>Avez-vous déjà participé à ce type d'évènement ?</p>
-      <div>
-        <input type="radio" id="" name="participationradio"/>
-        <label for="">Oui</label>
-
-        <input type="radio" id="" name="participationradio"/>
-        <label for="">Non</label>
-      </div>
-
-      <label id="lbldropfile" for="dropfile">Veuillez ajouter votre certificat médical.</label>
-
-      <input
-        type="file"
-        id="dropfile"
-        name="avatar"
-        accept="image/png, image/jpeg"
-      />
-
-      <div>
-        <button id="btn">Envoyer</button>
-      </div>
- 
+    <div class="col_4"></div>
+  </div>
   </body>
-  <script src="index.js"></script>
+<script src="index.js"></script>
 </html>

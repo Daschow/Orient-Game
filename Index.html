@@ -3,23 +3,13 @@
     <title>Orient Game</title>
   </header>
   <body>
-    <img src="Logo.png" />
-    <form action="/Index.html">
+    <img src="Logo.png" /> <br>
+
       <input type="text" placeholder="Nom" class="nameInput" />
-      <input type="text" placeholder="Premon" class="firstNameInput" />
+      <input type="text" placeholder="Prénom" class="firstNameInput" />
       <br />
       <input type="email" placeholder="Email" class="firstNameInput" />
-
-      <p>Sélectionner votre statut</p>
-      <select name="statue" class="">
-        <option value="">Etudiant(e)</option>
-        <option value="">Membre du personel</option>
-        <option value="">Personne extérieure</option>
-        <option value="">Etudiant(e) extérieur</option>
-      </select>
-
-      <br /><br />
-
+      <br>
       <label for="start">Date de naissance</label>
 
       <input
@@ -31,33 +21,53 @@
         max="2018-12-31"
       />
 
-      <p>Avez-vous déjà participé à ce type d'évènement ?</p>
-      <div>
-        <input type="radio" id="contactChoice1" name="contact" value="email" />
-        <label for="contactChoice1">Oui</label>
+      <p>Sélectionner votre statut</p>
+      <select name="statue" class="" id="selectOne">
+        <option value="0">Personne extérieure</option>
+        <option value="0">Membre du personnel</option>
+        <option value="1">Etudiant(e) extérieur</option>
+        <option value="1">Etudiant(e)</option>
+      </select>
 
-        <input
-          type="radio"
-          id="contactChoice2"
-          name="contact"
-          value="telephone"
-        />
-        <label for="contactChoice2">Non</label>
+      <p id="lblTwo">Composante</p>
+      <select name="statue" class="" id="selectTwo">
+        <option value="0">STAPS</option>
+        <option value="1">Autres</option>
+      </select>
+    
+      <div id="radiobtndiv">
+        <p>Etês-vous inscrit à un club ou une fédération ?</p>
+        <div>
+          <input type="radio" id="contactChoice1" value="1" name="federationradio" checked/>
+          <label for="contactChoice1">Oui</label>
+  
+          <input type="radio" id="contactChoice2"  value="0" name="federationradio"/>
+          <label for="contactChoice2">Non</label>
+        </div>
       </div>
 
-      <label for="avatar">Veuillez ajouter votre certificat médical.</label>
+      <p>Avez-vous déjà participé à ce type d'évènement ?</p>
+      <div>
+        <input type="radio" id="" name="participationradio"/>
+        <label for="">Oui</label>
+
+        <input type="radio" id="" name="participationradio"/>
+        <label for="">Non</label>
+      </div>
+
+      <label id="lbldropfile" for="dropfile">Veuillez ajouter votre certificat médical.</label>
 
       <input
         type="file"
-        id="avatar"
+        id="dropfile"
         name="avatar"
         accept="image/png, image/jpeg"
       />
 
       <div>
-        <button type="submit">Envoyer</button>
+        <button id="btn">Envoyer</button>
       </div>
-      <!-- statue/deja participe/ certifca medical -->
-    </form>
+ 
   </body>
+  <script src="index.js"></script>
 </html>

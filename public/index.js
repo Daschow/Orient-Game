@@ -1,4 +1,4 @@
-const buttonElement = document.getElementById("btn");
+const buttonElement = document.getquerryselector ("btn");
 const selectOne = document.getElementById("selectOne");
 const selectTwo = document.getElementById("selectTwo");
 const lblTwo = document.getElementById("lblTwo");

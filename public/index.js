@@ -11,35 +11,28 @@ const dropfilediv = document.querySelector("#dropfilediv");
 const successMessage = document.querySelector("#successMessage");
 const composantSelector = document.querySelector("#composantSelector");
 const bxtlicence = document.querySelector("#bxtlicence");
-
-load();
-function load() {
-    radiobtndiv.style.display = "none";
+Clear();
+radiobtndiv.style.display = "none";
+function Clear() {
     composantSelector.style.display = "none";
     dropfilediv.style.display = "none";
     bxtlicence.style.display = "none";
 }
-
 buttonElement.addEventListener("click", function (event) {
     successMessage.style.display = "block";
     console.log("debug");
     Alert.render();
 });
-
 selectOne.addEventListener("change", function (even) {
     var selectOneValue = selectOne.options[selectOne.selectedIndex].value;
-    if (selectOneValue == 0) {
-        //Externe
-        dropfilediv.style.display = "none";
-        composantSelector.style.display = "none";
+    if (selectOneValue == 3) {
+        Clear()
+    } else if (selectOneValue == 0) {
         radiobtndiv.style.display = "block";
         contactChoice1.checked = false;
         contactChoice2.checked = false;
-    } else if (selectOneValue == 3) {
-        //default
-        load();
+        Clear();
     } else {
-        //Etudiant
         var selectTwoValue = selectTwo.options[selectTwo.selectedIndex].value;
         composantSelector.style.display = "block";
         dropfilediv.style.display = "none";
@@ -66,9 +59,7 @@ contactChoice1.addEventListener("change", function (even) {
     dropfilediv.style.display = "none";
     bxtlicence.style.display = "block";
 });
-
 var Alert = new CustomAlert();
-
 function CustomAlert() {
     this.render = function () {
         //Show Modal

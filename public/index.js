@@ -1,16 +1,16 @@
-const buttonElement = document.querySelector(".btn");
-const selectOne = document.querySelector(".selectOne");
-const selectTwo = document.querySelector(".selectTwo");
-const lblTwo = document.querySelector(".lblTwo");
-const dropfile = document.querySelector(".dropfile");
-const lbldropfile = document.querySelector(".lbldropfile");
-const radiobtndiv = document.querySelector(".radiobtndiv");
-const contactChoice1 = document.querySelector(".contactChoice1");
-const contactChoice2 = document.querySelector(".contactChoice2");
-const dropfilediv = document.querySelector(".dropfilediv");
-const successMessage = document.querySelector(".successMessage");
-const composantSelector = document.querySelector(".composantSelector");
-const bxtlicence = document.querySelector(".bxtlicence");
+const buttonElement = document.querySelector("#btn");
+const selectOne = document.querySelector("#selectOne");
+const selectTwo = document.querySelector("#selectTwo");
+const lblTwo = document.querySelector("#lblTwo");
+const dropfile = document.querySelector("#dropfile");
+const lbldropfile = document.querySelector("#lbldropfile");
+const radiobtndiv = document.querySelector("#radiobtndiv");
+const contactChoice1 = document.querySelector("#contactChoice1");
+const contactChoice2 = document.querySelector("#contactChoice2");
+const dropfilediv = document.querySelector("#dropfilediv");
+const successMessage = document.querySelector("#successMessage");
+const composantSelector = document.querySelector("#composantSelector");
+const bxtlicence = document.querySelector("#bxtlicence");
 
 load();
 function load() {
